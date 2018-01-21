@@ -12,7 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <style>
-#email,#pwd
+#email,#password
 {
 	width: 500px;	
 }
@@ -29,15 +29,15 @@ width: 300px;
 <body>
 <div class="container">
 <h2 align="center"><u>Login Form</u></h2>
-<form action="StudentHome.jsp" method="get">
+<form action="StudentLogin.spring" method="get">
  <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
     </div>
     
     <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
     </div>
     <div class="checkbox">
       <label><input type="checkbox" name="remember"> Remember me</label>

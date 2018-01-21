@@ -11,7 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <style>
-#fname,#fathername,#lname,#mothername,#mobileno,#bdate,#address,#city,#pin,#psn,#lyp,#email,#pwd
+#studentId,#firstName,#fatherName,#lastName,#motherName,#mobileNo,#birthDate,#address,#nationality,#city,#pinCode,#psn,#lyp,#email,#password,#date
 {
 	width: 500px;	
 }
@@ -29,46 +29,63 @@ width: 300px;
 
 <div class="container">
   <h2 align="center"><u>Registration Form</u></h2>
-  <form action="StudentLogin.jsp">
+  <form action="Registration.spring" method="post" id="Registration">
+  
+ <!--  <div class="form-group">
+      <label for="studentId">Student Id:</label>
+      <input type="text" class="form-control" id="studentId" placeholder="Student Id" name="studentId">
+    </div> -->
+    
+     <div class="form-group">
+      <label for="date">Date as a date of joining:</label>
+      <input type="date" class="form-control" id="date" placeholder="Joining date" name="date">
+    </div>
+    
+    
     <div class="form-group">
-      <label for="fname">First Name:</label>
-      <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname">
+      <label for="firstName">First Name:</label>
+      <input type="text" class="form-control" id="firstName" placeholder="Enter first name" name="firstName">
     </div>
     
     <div class="form-group">
-      <label for="fathername">Father's Name:</label>
-      <input type="text" class="form-control" id="fathername" placeholder="Enter father's name" name="fathername">
+      <label for="fatherName">Father's Name:</label>
+      <input type="text" class="form-control" id="fatherName" placeholder="Enter father's name" name="fatherName">
     </div>
     
     <div class="form-group">
-      <label for="lname">Last Name:</label>
-      <input type="text" class="form-control" id="lname" placeholder="Enter last name" name="lname">
+      <label for="lastName">Last Name:</label>
+      <input type="text" class="form-control" id="lastName" placeholder="Enter last name" name="lastName">
     </div>
     
     <div class="form-group">
-      <label for="mothername">Mother's Name:</label>
-      <input type="text" class="form-control" id="mothername" placeholder="Enter mother's name" name="mothername">
+      <label for="motherName">Mother's Name:</label>
+      <input type="text" class="form-control" id="motherName" placeholder="Enter mother's name" name="motherName">
     </div>
     
     <label for="gender">Gender:</label>
     <div class="radio">
-  <label><input type="radio" name="optradio">Male</label>
+  <label><input type="radio" name="gender" id="gender">Male</label>
 </div>
 <div class="radio">
-  <label><input type="radio" name="optradio">Female</label>
+  <label><input type="radio" name="gender" id="gender">Female</label>
 </div>
 <!-- <div class="radio disabled">
   <label><input type="radio" name="optradio" disabled>Option 3</label>
 </div> -->
     
      <div class="form-group">
-      <label for="mobileno">Mobile No.:</label>
-      <input type="text" class="form-control" id="mobileno" placeholder="Enter mobile number" name="mobileno">
+      <label for="birthDate">Birth Date:</label>
+      <input type="date" class="form-control" id="birthDate" placeholder="Enter birthdate" name="birthDate">
     </div>
     
-     <div class="form-group">
-      <label for="bdate">Birth Date:</label>
-      <input type="date" class="form-control" id="bdate" placeholder="Enter birthdate" name="bdate">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    
+    <div class="form-group">
+      <label for="mobileNo">Mobile No.:</label>
+      <input type="text" class="form-control" id="mobileNo" placeholder="Enter mobile number" name="mobileNo">
     </div>
     
      <div class="form-group">
@@ -79,7 +96,7 @@ width: 300px;
      <div class="form-group">
       <label for="state">State:</label>
      
-     <select name="state">
+     <select name="state" id="state">
      <option value="">------------Select State------------</option>
 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -125,40 +142,38 @@ width: 300px;
     </div>
     
     <div class="form-group">
-      <label for="pin">Pin Code:</label>
-      <input type="text" class="form-control" id="pin" placeholder="Enter pin code" name="pin">
+      <label for="pinCode">Pin Code:</label>
+      <input type="text" class="form-control" id="pinCode" placeholder="Enter pin code" name="pinCode">
     </div>
     
      <div class="form-group">
-      <label for="psn">Previous School Name:</label>
-      <input type="text" class="form-control" id="psn" placeholder="Enter previous school name" name="psn">
+      <label for="nationality">Nationality:</label>
+      <input type="text" class="form-control" id="nationality" placeholder="Enter nationality" name="nationality">
     </div>
     
-    
+    <div class="form-group">
+    <label for="category">Category:</label>
+    <select name="category" id="category">
+    <option value="">------------Select Category------------</option>
+    <option value="General">General</option>
+    <option value="OBC">OBC</option>
+    <option value="SC">SC</option> 
+    <option value="NT">NT</option>
+    </select>
+    </div>
     
      <div class="form-group">
       <label for="lyp">Last Year Percentage:</label>
       <input type="text" class="form-control" id="lyp" placeholder="Enter last year percentage" name="lyp">
     </div>
     
-     <div class="form-group">
-      <label for="tdate">Date as a date of joining:</label>
-      <input type="date" class="form-control" id="tdate" placeholder="Joining date" name="tdate">
-    </div>
-    
-    
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
     </div>
-    
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-    </div>
-    <div class="checkbox">
+   <!--  <div class="checkbox">
       <label><input type="checkbox" name="remember"> Remember me</label>
-    </div>
+    </div> -->
     <button type="submit" class="btn btn-default">Submit</button>
  
 </div>
