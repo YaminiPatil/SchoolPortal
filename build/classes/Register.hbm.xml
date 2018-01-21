@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  <!DOCTYPE hibernate-mapping SYSTEM "./hibernate-mapping-3.0.dtd" > 
+ -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	 <class name="com.pojo.StudentRegister" table="student">
+	 	<id name="email"><generator class="assigned"></generator></id>
+	 	<!-- <property name="studentId" column="studentId"></property>
+ -->	 	<property name="date" column="date"></property>
+	 	<property name="firstName" column="firstName"></property>
+	 	<property name="fatherName" column="fatherName"></property>
+	 	<property name="lastName" column="lastName"></property>
+	 	<property name="motherName" column="motherName"></property>
+	    <property name="gender" column="gender"></property>
+	 	<property name="birthDate" column="birthDate"></property>
+	 	<property name="mobileNo" column="mobileNo"></property>
+	 	<property name="address" column="address"></property>
+	 	<property name="state" column="state"></property>
+	 	<property name="city" column="city"></property>
+	 	<property name="pinCode" column="pinCode"></property>
+	 	<property name="nationality" column="nationality"></property>
+	 	<property name="category" column="category"></property>
+	 	<property name="lyp" column="lyp"></property>
+	 	<property name="password" column="password"></property>
+	    
+	 	
+
+	 </class>
+</hibernate-mapping>
+
